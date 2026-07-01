@@ -1,6 +1,7 @@
-import express from "express";
+import express, { type Express } from "express";
 import { route } from "./routes/testRoutes.js";
-const app = express();
+
+const app: Express = express();
 const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
@@ -13,6 +14,14 @@ app.get("/", (req, res) => {
 
 route(app);
 
-app.listen(PORT, (req, res) => {
+interface ServerConfig {
+	port: string | number;
+}
+
+const serverConfig: ServerConfig = {
+	port: PORT
+};
+
+app.listen(serverConfig.port, () => {
 	console.log("Your server is listening on port: ", PORT);
 });

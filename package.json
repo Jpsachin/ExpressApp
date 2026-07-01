@@ -1,0 +1,16 @@
+{
+	"name": "Express Application",
+	"version": "1.0.0",
+	"description": "A practice Express Application",
+	"license": "ISC",
+	"author": "Jay Prakash",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"test": "nodemon index.js"
+	},
+	"dependencies": {
+		"express": "^5.2.1",
+		"nodemon": "^3.1.14"
+	}
+}
